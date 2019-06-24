@@ -37,7 +37,7 @@ class CardController {
             let topLevelJSON = try jDecoder.decode(TopLevelJSON.self, from: data)
             
             let card = topLevelJSON.cards[0]
-            
+            completion(card)
         } catch {
             print ("Error getting data from URL")
             completion(nil)

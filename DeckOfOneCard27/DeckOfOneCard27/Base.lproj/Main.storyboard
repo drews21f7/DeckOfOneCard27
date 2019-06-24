@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Card View Controller-->
         <scene sceneID="CcL-Bb-ta1">
             <objects>
-                <viewController id="G8u-2L-x0w" sceneMemberID="viewController">
+                <viewController id="G8u-2L-x0w" customClass="CardViewController" customModule="DeckOfOneCard27" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wwF-ry-mCX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,6 +81,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zoI-di-55X">
                                         <rect key="frame" x="0.0" y="130.5" width="374" height="30"/>
                                         <state key="normal" title="Draw a Card!"/>
+                                        <connections>
+                                            <action selector="drawButtonTapped:" destination="G8u-2L-x0w" eventType="touchUpInside" id="JRw-jk-Zj5"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -96,6 +99,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="I9n-xN-ISB"/>
                     </view>
+                    <connections>
+                        <outlet property="cardImageView" destination="9Cx-Te-f0U" id="ipE-8S-Lt9"/>
+                        <outlet property="codeLabel" destination="w33-Vz-VD9" id="sBW-OB-FS9"/>
+                        <outlet property="suitLabel" destination="ZUA-Mv-l7C" id="aIA-Hf-0BB"/>
+                        <outlet property="valueLabel" destination="BRb-Wo-jy4" id="J69-Nb-8bT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rgw-CM-74o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
